@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JetLagWise — Jet Lag Recovery Planner: Light & Sleep Shift Plan for Your Trip</title>
+<meta name="description" content="Free jet lag planner. Enter origin, destination and arrival time to get a day-by-day light-exposure and sleep-shift plan, with caffeine and melatonin timing guidance.">
+<link rel="canonical" href="https://jetlagwise.fixoraa.tech/">
+<meta property="og:title" content="JetLagWise — Jet Lag Recovery Planner: Light & Sleep Shift Plan for Your Trip">
+<meta property="og:description" content="Free jet lag planner. Enter origin, destination and arrival time to get a day-by-day light-exposure and sleep-shift plan, with caffeine and melatonin timing guidance.">
+<meta property="og:url" content="https://jetlagwise.fixoraa.tech/">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--pri:#0369A1;--acc:#F59E0B;--bgc:#F0F9FF}
+body{background:var(--bgc);font-family:'Segoe UI',system-ui,sans-serif}
+.pri{background:var(--pri)} .prit{color:var(--pri)} .acct{color:var(--acc)}
+.btn{background:var(--pri);color:#fff;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+.btn:hover{opacity:.9} .btn2{background:var(--acc);color:#111;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+input,select,textarea{border:1.5px solid #cbd5e1;border-radius:.55rem;padding:.55rem .7rem;width:100%;background:#fff;color:#0f172a}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--pri);border-color:transparent}
+label{font-size:.83rem;font-weight:600;display:block;margin-bottom:.3rem}
+.card{background:#fff;border-radius:1rem;box-shadow:0 8px 30px rgba(15,23,42,.08);padding:1.4rem}
+article p{margin:.7rem 0;line-height:1.75;color:#334155}
+article h2{font-size:1.45rem;font-weight:800;margin:1.6rem 0 .4rem;color:#0f172a}
+.faq{background:#fff;border-radius:.7rem;padding:.9rem 1.1rem;margin:.55rem 0;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+.faq summary{font-weight:700;cursor:pointer}
+table.dt{width:100%;border-collapse:collapse} table.dt th,table.dt td{border:1px solid #e2e8f0;padding:.45rem .6rem;text-align:left;font-size:.9rem}
+table.dt th{background:#f1f5f9}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "JetLagWise", "url": "https://jetlagwise.fixoraa.tech/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free jet lag planner. Enter origin, destination and arrival time to get a day-by-day light-exposure and sleep-shift plan, with caffeine and melatonin timing guidance."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does jet lag last?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly one day per time zone crossed westward and up to a day and a half per zone eastward, with light timed correctly. An 8-zone eastward trip can need a week to fully clear; most people feel functional well before that."}}, {"@type": "Question", "name": "Should I shift my sleep before the flight?", "acceptedAnswer": {"@type": "Answer", "text": "Yes for trips of 3+ days: moving bed and wake times about an hour a day toward destination time for 2\u20133 days banks adjustment at home, where it costs least. Your plan includes the direction-specific shift."}}, {"@type": "Question", "name": "When should I seek bright light?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on direction: eastward travellers advance their clock with morning light at the destination; westward travellers delay theirs with late-afternoon and evening light. The planner gives your route's pattern day by day."}}, {"@type": "Question", "name": "Is melatonin a good idea?", "acceptedAnswer": {"@type": "Answer", "text": "Small doses at destination bedtime help many travellers, especially eastward across 5+ zones. It is a hormone with interactions and variable product quality \u2014 treat it as optional and check with a clinician if you take medication or have health conditions."}}, {"@type": "Question", "name": "What if my trip is only two days?", "acceptedAnswer": {"@type": "Answer", "text": "Usually do not adapt: stay near home time, protect one anchor sleep, and time caffeine and light tactically around your commitments. The planner switches to this strategy when you select a short trip."}}, {"@type": "Question", "name": "Does alcohol help you sleep on the plane?", "acceptedAnswer": {"@type": "Answer", "text": "It sedates but fragments sleep architecture, and it dehydrates \u2014 the second day reliably feels worse. Water, a destination-timed sleep attempt, and a short nap strategy serve you better."}}]}</script>
+</head>
+<body id="top">
+<header class="sticky top-0 z-40 shadow-md" style="background:#0C4A6E">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between">
+    <a href="#top" class="text-xl font-extrabold tracking-tight" style="color:#F0F9FF">✈ JetLagWise</a>
+    <nav class="flex gap-5 text-sm font-semibold" style="color:#F0F9FF">
+      <a href="#top" class="hover:underline">Home</a>
+      <a href="https://fixoraa.tech" class="hover:underline">More Tools</a>
+    </nav>
+  </div>
+</header>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pt-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+        <script>
+          atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+        </script>
+        <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="mx-auto max-w-6xl px-4 sm:px-6 py-8">
+  <div class="text-center mb-6">
+    <h1 class="text-3xl sm:text-4xl font-extrabold" style="color:#0f172a">Jet Lag Recovery Planner</h1>
+    <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Crossing time zones scrambles your body clock — but the clock can be re-set on purpose. Pick your route and arrival time; JetLagWise builds your pre-flight shift and a 3-day light-and-sleep recovery plan.</p>
+    <span class="inline-block mt-3 px-3 py-1 rounded-full text-xs font-bold text-white pri">✓ Unlimited Free Usage — No Signup, No Watermark</span>
+  </div>
+  <div class="card">
+  <div class="grid md:grid-cols-4 gap-3">
+    <div><label>Flying from (UTC offset)</label><select id="from"></select></div>
+    <div><label>Flying to (UTC offset)</label><select id="to"></select></div>
+    <div><label>Arrival time at destination</label><input id="arr" type="time" value="10:00"></div>
+    <div><label>Trip length</label><select id="len"><option value="short">Under 3 days — stay on home time if possible</option><option value="long" selected>3+ days — shift to destination time</option></select></div>
+  </div>
+  <button class="btn w-full mt-4" onclick="plan()">Build My Recovery Plan</button>
+  <div id="out" class="mt-4"></div>
+ </div>
+</main>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="464498"></script>
+    </div>
+  </div>
+</div>
+<section class="mx-auto max-w-4xl px-4 sm:px-6 pb-6">
+  <article>
+  <h2>Jet lag is a clock problem, not a tiredness problem</h2>
+<p>After a long flight you are not merely tired — sleep deprivation lifts with one good night. Jet lag persists because your circadian clock, a roughly 24-hour oscillator in your brain entrained by light, is still keeping your departure city's hours. It governs far more than sleepiness: alertness peaks, body temperature, digestion and hormone release all run on its schedule, which is why jet lag feels like being haunted by the wrong time of day from the inside. The cure is therefore not rest but re-entrainment — deliberately feeding the clock the signals that move it to destination time. JetLagWise turns that science into a schedule.</p>
+<p>The clock's master signal is light, especially bright outdoor light, hitting the eyes at the right phase. Light in your biological morning pushes the clock earlier; light in your biological evening pushes it later. Everything else — sleep timing, meals, caffeine, melatonin — is supporting cast. Get the light right and the rest accelerates; get it backwards and you can add days to your adjustment, which is why a plan beats improvisation.</p>
+<h2>East is harder than west — and by how much</h2>
+<p>Flying west stretches your day: you chase the sun, bedtime comes later, and the clock must delay — a direction human clocks drift naturally, since our internal day runs slightly longer than 24 hours. Flying east compresses the day and demands the clock advance, against its natural drift. The lived result is the traveller's proverb: west is best, east is a beast. As a planning rule, expect roughly one day of adjustment per time zone crossed westward, and up to a day and a half per zone eastward — an eight-zone eastward hop can need most of a week to fully clear.</p>
+<p>Direction decides your light strategy, and the planner encodes it: eastward travellers advancing their clock seek bright light in the destination's morning in the first days; westward travellers delaying theirs seek light in the late afternoon and evening. The pre-flight trick is equally directional — shifting your sleep an hour a day toward destination time for two or three days before departure banks adjustment while you are still home, where the cost of a shifted evening is lowest.</p>
+<h2>The short-trip exception</h2>
+<p>For trips under three days, the wisest plan is often not to adapt at all. Fully shifting for a two-day conference spends your adjustment budget twice — once arriving, once returning — and strands you awake at the meeting's local midnight. Instead, anchor to home time: sleep as close to your home schedule as social obligations permit, schedule demanding work into your home-time alertness peaks, use light and caffeine tactically, and let the trip be a raid rather than a relocation. JetLagWise's trip-length control switches strategy exactly on this logic.</p>
+<p>The exception has an exception: if a short trip's single critical event — a final, a keynote, a wedding — lands at your body's 3 a.m., shift partially toward it for two days prior. Partial adaptation is a real technique: move halfway, perform, and the return home is correspondingly gentler.</p>
+<h2>Caffeine, naps, alcohol and melatonin, handled honestly</h2>
+<p>Caffeine is a tool with a half-life: superb for defending alertness in your destination morning, destructive after midday because half of it is still on duty six hours later when you are begging for sleep. Naps obey a similar discipline — twenty to thirty minutes before mid-afternoon can rescue a day; two hours at 17:00 will murder the night. Alcohol on the flight feels like sleep and is actually sedation with fragmented architecture; it reliably worsens the second day. The plan respects all three without moralising: they are levers with timings, not sins.</p>
+<p>Melatonin deserves its reputation and its caveats. Taken at destination bedtime in small doses, it whispers 'night' to the clock and shortens adjustment for many travellers, particularly eastward across five-plus zones. It is a hormone, not a vitamin: quality varies by market, it interacts with medications, and it is unsuitable for some people. The planner flags it as an option with a consult-your-doctor note, which is where any honest tool should leave it.</p>
+<h2>Building your arrival day</h2>
+<p>Arrival day is where trips are won. Whatever your body believes, behave as the destination clock dictates: eat at local mealtimes, get outside into daylight at the plan's prescribed window, move your body — a walk does triple duty as light exposure, exercise and exploration — and defend local bedtime even if sleep comes in two instalments the first night. Wake-time discipline matters most: getting up at local morning, into bright light, anchors the new rhythm faster than any bedtime ritual.</p>
+<p>Then be patient with arithmetic: if you crossed eight zones east, day three feeling 'mostly human' is success, not failure — full entrainment is still completing. Schedule accordingly: put the expendable meetings first, the performance last, and tell people the truth. A plan you follow beats a heroic improvisation you abandon by day two — which is why yours is written down, above, before you fly.</p>
+<h2>Frequent flyers' refinements</h2>
+<p>Seasoned travellers start the shift the moment they board — watch set to destination time, meals and sleep attempted on that schedule in the air — and they book arrival times strategically: morning arrivals for westward trips (a full day of light to spend awake), afternoon or evening arrivals eastward (a short, survivable stretch to bedtime). They also treat the return trip as its own journey with its own plan, because the clock must travel home too, and Monday-morning obligations do not care about your itinerary.</p>
+<p>None of this requires apps, wearables or supplements beyond the basics. It requires knowing your direction, your zone count, and which hours of light to hunt and which to avoid — the three facts JetLagWise organises for you. Fly often enough and the plan becomes instinct; until then, let the planner hold the science while you hold the boarding pass.</p>
+<h2>Special cases: children, older travellers, shift workers</h2>
+<p>Children's clocks are more plastic than adults' — they typically adjust faster — but their sleep is also more load-bearing for everyone's sanity: protect the child's anchor sleep first, shift naps toward destination time a day ahead where possible, and expect one rough evening rather than a rough week. Older travellers adjust more slowly and feel the sleep loss more; build an extra buffer day before obligations and be more conservative with caffeine, which lingers longer in older bodies. The planner's schedule is the template; these are the margins to widen.</p>
+<p>Shift workers live a permanent negotiation with the same clock and can steal its lessons in reverse: bright light during the intended waking block, darkness defended fiercely during the sleep block, consistent anchor hours even on days off. Jet lag, in the end, is shift work with better scenery — and the countermeasures are the same because the biology is.</p>
+<h2>Packing the plan into the trip</h2>
+<p>Save or screenshot your plan before departure — the version of you reading it at 30,000 feet will be tired, offline and in no state to recompute zone arithmetic. Set the two alarms the plan implies (destination wake time, light-seeking walk) while still on the ground, and brief anyone travelling with you: a plan shared is a plan defended when the hotel bar argues otherwise. On the return, run the planner again rather than reversing the old plan from memory; direction flips every instruction, and flipped-from-memory is how travellers end up taking morning light on precisely the morning they needed darkness. The plan is short. The discipline is the souvenir that actually gets used.</p>
+  <h2>Frequently Asked Questions</h2>
+  <details class="faq"><summary>How long does jet lag last?</summary><p>Roughly one day per time zone crossed westward and up to a day and a half per zone eastward, with light timed correctly. An 8-zone eastward trip can need a week to fully clear; most people feel functional well before that.</p></details>
+<details class="faq"><summary>Should I shift my sleep before the flight?</summary><p>Yes for trips of 3+ days: moving bed and wake times about an hour a day toward destination time for 2–3 days banks adjustment at home, where it costs least. Your plan includes the direction-specific shift.</p></details>
+<details class="faq"><summary>When should I seek bright light?</summary><p>It depends on direction: eastward travellers advance their clock with morning light at the destination; westward travellers delay theirs with late-afternoon and evening light. The planner gives your route's pattern day by day.</p></details>
+<details class="faq"><summary>Is melatonin a good idea?</summary><p>Small doses at destination bedtime help many travellers, especially eastward across 5+ zones. It is a hormone with interactions and variable product quality — treat it as optional and check with a clinician if you take medication or have health conditions.</p></details>
+<details class="faq"><summary>What if my trip is only two days?</summary><p>Usually do not adapt: stay near home time, protect one anchor sleep, and time caffeine and light tactically around your commitments. The planner switches to this strategy when you select a short trip.</p></details>
+<details class="faq"><summary>Does alcohol help you sleep on the plane?</summary><p>It sedates but fragments sleep architecture, and it dehydrates — the second day reliably feels worse. Water, a destination-timed sleep attempt, and a short nap strategy serve you better.</p></details>
+  </article>
+</section>
+<footer class="mt-6 py-8" style="background:#0C4A6E;color:#F0F9FF">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 text-center text-sm">
+    <p class="font-bold text-base">JetLagWise</p>
+    <p class="opacity-80 mt-1">Free jet lag planner. Enter origin, destination and arrival time to get a day-by-day light-exposure and sleep-shift plan, with caffeine and melatonin timing guidance.</p>
+    <p class="mt-2"><a href="#top" class="underline">Home</a> · <a href="https://fixoraa.tech" class="underline">More Tools</a></p>
+    <p class="fx-credit" style="text-align:center;font-size:12.5px;opacity:.62;margin:10px auto 2px;letter-spacing:.01em">Made by <a href="https://fixoraa.tech" target="_blank" rel="noopener" style="color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px">Fixoraa</a></p>
+  </div>
+</footer>
+<script>
+
+var ZONES=[['UTC−8 — Los Angeles / Vancouver',-8],['UTC−5 — New York / Toronto',-5],['UTC−3 — São Paulo',-3],['UTC+0 — London / Lisbon',0],['UTC+1 — Paris / Berlin / Lagos',1],['UTC+2 — Cairo / Johannesburg',2],['UTC+3 — Moscow / Riyadh / Nairobi',3],['UTC+4 — Dubai',4],['UTC+5:30 — Delhi / Mumbai',5.5],['UTC+6 — Dhaka',6],['UTC+7 — Bangkok / Jakarta',7],['UTC+8 — Singapore / Beijing / Perth',8],['UTC+9 — Tokyo / Seoul',9],['UTC+10 — Sydney',10],['UTC+12 — Auckland',12]];
+function fill(id){document.getElementById(id).innerHTML=ZONES.map(function(z){return '<option value="'+z[1]+'">'+z[0]+'</option>';}).join('');}
+fill('from');fill('to');document.getElementById('from').value='0';document.getElementById('to').value='5.5';
+function plan(){
+  var f=+document.getElementById('from').value,t=+document.getElementById('to').value;
+  var diff=t-f; if(diff>12)diff-=24; if(diff<-12)diff+=24;
+  var dir=diff>0?'east — your day must get shorter; advance your clock':diff<0?'west — your day stretches; delay your clock':'';
+  var zones=Math.abs(diff);
+  var arr=document.getElementById('arr').value||'10:00';
+  var shortTrip=document.getElementById('len').value==='short';
+  var rows='';
+  if(zones<3){rows='<p class="font-semibold">✅ Under 3 time zones — jet lag should be mild. Keep normal local sleep times, get morning daylight on arrival day, and avoid long naps. Hydrate on the flight and you will likely feel normal within a day.</p>';}
+  else if(shortTrip){rows='<p class="font-semibold">Short trip strategy ('+zones+' zones): stay close to HOME time. Sleep and eat on your home schedule where social plans allow, use caffeine in your home-morning, and protect one anchor sleep. Shifting fully for a 2-day trip costs more than it saves.</p>';}
+  else{
+    var shiftPerDay= diff>0? 'Go to bed and wake ~1 hour EARLIER each pre-flight day.' : 'Go to bed and wake ~1 hour LATER each pre-flight day.';
+    rows='<div class="overflow-x-auto"><table class="dt"><tr><th>When</th><th>Light</th><th>Sleep</th><th>Caffeine / melatonin notes</th></tr>'
+    +'<tr><td>2 days before</td><td>'+(diff>0?'Bright light early morning':'Bright light in the evening')+'</td><td>'+shiftPerDay+'</td><td>Last caffeine by early afternoon.</td></tr>'
+    +'<tr><td>On the flight</td><td>Set watch to destination time at boarding</td><td>Sleep when it is night at destination ('+arr+' arrival)</td><td>Skip alcohol; it fragments sleep. Small melatonin dose (0.5–3 mg) at destination bedtime can help — check with your doctor if unsure.</td></tr>'
+    +'<tr><td>Arrival day</td><td>'+(diff>0?'Seek bright light in the morning':'Seek bright light in the late afternoon / evening')+'</td><td>Nap max 30 min before 15:00 local; bed at local ~22:00–23:00</td><td>Caffeine only before noon local.</td></tr>'
+    +'<tr><td>Day 2</td><td>Repeat arrival-day light pattern; outdoor walk is ideal</td><td>Hold local schedule even if you wake early — stay in dim light until morning</td><td>Melatonin at local bedtime if used.</td></tr>'
+    +'<tr><td>Day 3</td><td>Normal local daylight rhythm</td><td>Most travellers crossing '+zones+' zones feel ~80% adjusted; full adjustment ≈ 1 day per zone</td><td>Stop melatonin once sleep is stable.</td></tr></table></div>';
+  }
+  document.getElementById('out').innerHTML='<div class="text-lg font-bold prit">Time shift: '+zones+' hours '+dir+'</div>'+rows+'<p class="text-xs text-slate-500 mt-2">General guidance, not medical advice. Melatonin rules vary by country and personal health — when in doubt, ask a clinician.</p>';
+}
+plan();
+
+</script>
+</body>
+</html>
